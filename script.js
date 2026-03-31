@@ -70,10 +70,11 @@ function addMsg(container, text, who){
   container.appendChild(div);
   container.scrollTop = container.scrollHeight;
 
-  // Play sound on bot message
+//   // Play sound on bot message
   if(who === "bot"){
-    const sound = new Audio("https://www.soundjay.com/buttons/sounds/button-3.mp3");
-    sound.play();
+    // Sound disabled - autoplay policy
+    // const sound = new Audio("https://www.soundjay.com/buttons/sounds/button-3.mp3");
+    // sound.play();
   }
 }
 
@@ -200,9 +201,95 @@ function initScrollToForm(){
   });
 }
 
+function initStatsCountUp(){
+  const section = $("#stats");
+  const nums = $$(".stat__num[data-count]", section || document);
+  if (!section || nums.length === 0) return;
+
+  const prefersReduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (prefersReduced) return;
+
+  const animate = (el) => {
+    const target = Number(el.getAttribute("data-count") || "0");
+    if (!Number.isFinite(target) || target <= 0) return;
+
+    const start = 0;
+    const duration = 900;
+    const t0 = performance.now();
+
+    const format = (n) => n.toLocaleString("en-IN");
+
+    const tick = (now) => {
+      const p = Math.min(1, (now - t0) / duration);
+      const eased = 1 - Math.pow(1 - p, 3);
+      const value = Math.round(start + (target - start) * eased);
+      el.textContent = format(value);
+      if (p < 1) requestAnimationFrame(tick);
+    };
+
+    requestAnimationFrame(tick);
+  };
+
+  let ran = false;
+  const run = () => {
+    if (ran) return;
+    ran = true;
+    nums.forEach(animate);
+  };
+
+  if ("IntersectionObserver" in window){
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)){
+          run();
+          io.disconnect();
+        }
+      },
+      { threshold: 0.35 }
+    );
+    io.observe(section);
+  } else {
+    run();
+  }
+}
+
+function initTestimonialAnimation(){
+  const section = document.querySelector(".testimonials-section");
+  const cards = $$(".testimonials-grid > *", section || document);
+  
+  if (!section || cards.length === 0) return;
+  
+  const prefersReduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (prefersReduced) {
+    cards.forEach(card => card.classList.add("animate"));
+    return;
+  }
+  
+  if ("IntersectionObserver" in window){
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting){
+            e.target.classList.add("animate");
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+    
+    cards.forEach((card) => io.observe(card));
+  } else {
+    cards.forEach(card => card.classList.add("animate"));
+  }
+}
+
 // ---------- INITIALIZE ----------
 initYear();
 initMobileNav();
 initForm();
 initChatbot();
 initScrollToForm();
+initStatsCountUp();
+initTestimonialAnimation();
+
+ 
