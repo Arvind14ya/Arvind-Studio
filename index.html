@@ -39,48 +39,48 @@
     <main id="main">
       <section class="hero" aria-label="Hero">
         <div class="hero__bg" aria-hidden="true">
+          <div class="hero__pattern"></div>
           <div class="hero__blob hero__blob--a"></div>
           <div class="hero__blob hero__blob--b"></div>
-          <div class="hero__grid"></div>
+          <div class="hero__lines"></div>
         </div>
 
         <div class="container hero__inner">
           <div class="hero__content">
-            <p class="eyebrow">Freelance Web Designer</p>
-            <h1 class="hero__title">I build high-converting websites for businesses</h1>
+            <p class="eyebrow">Startup-Ready Web Design</p>
+
+            <div class="hero__decor" aria-hidden="true">
+              <span class="hero__decor-line"></span>
+              <span class="hero__decor-dot"></span>
+            </div>
+
+            <h1 class="hero__title">High-converting websites that help your business grow</h1>
             <p class="hero__subtitle">
-              Get a modern, fast website that turns visitors into leads—built with a clear strategy, clean design, and mobile-first performance.
+              Clean design, clear messaging, and fast performance—so visitors trust you, understand your offer, and take action.
             </p>
 
             <div class="hero__actions">
-              <a class="btn btn--primary" href="#contact">Get Your Website</a>
-              <a class="btn btn--secondary" href="#work">See Work</a>
+              <a class="btn btn--hero-primary" href="#contact">Get Started</a>
+              <a class="btn btn--hero-outline" href="#work">View Work</a>
             </div>
 
             <div class="hero__trust">
-              <div class="trust-pill">Fast, SEO-friendly builds</div>
-              <div class="trust-pill">Conversion-focused layout</div>
-              <div class="trust-pill">Mobile-first design</div>
+              <div class="trust-pill trust-pill--hero">Fast load + SEO basics</div>
+              <div class="trust-pill trust-pill--hero">Mobile-first layouts</div>
+              <div class="trust-pill trust-pill--hero">Conversion-focused CTAs</div>
             </div>
           </div>
 
-          <aside class="hero__card" aria-label="Project outcome highlights">
-            <div class="metric">
-              <div class="metric__value">+38%</div>
-              <div class="metric__label">Average lead lift on redesigns</div>
+          <div class="hero__visual" aria-label="Team working image">
+            <div class="hero__ring" aria-hidden="true"></div>
+            <div class="hero__photo">
+              <img
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=80"
+                alt="Team collaborating at a desk"
+                loading="lazy"
+              />
             </div>
-            <div class="metric">
-              <div class="metric__value">1–2 weeks</div>
-              <div class="metric__label">Typical delivery timeline</div>
-            </div>
-            <div class="metric">
-              <div class="metric__value">90+</div>
-              <div class="metric__label">Performance score targets</div>
-            </div>
-            <div class="hero__card-cta">
-              <a class="link" href="#contact">Get a free website audit →</a>
-            </div>
-          </aside>
+          </div>
         </div>
       </section>
 
@@ -94,8 +94,8 @@
           </div>
 
           <div class="about">
-            <div class="about__card">
-              <h3 class="card__title">Hi, I’m Arvind</h3>
+            <div class="about__main">
+              <h3 class="about__title">Hi, I’m Arvind</h3>
               <p class="muted">
                 I design and build websites that make it easy for customers to trust you, understand your offer, and take action.
                 Whether you need a fresh business site, an ecommerce storefront, or a landing page for ads—my process is built around results.
@@ -117,6 +117,19 @@
               </div>
             </div>
 
+            <div class="about__visual" aria-label="Team working image">
+              <div class="about__ring" aria-hidden="true"></div>
+              <div class="about__photo">
+                <img
+                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=80"
+                  alt="Team collaborating in a modern office"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="about__grid">
             <div class="about__card">
               <h3 class="card__title">Skills & tools</h3>
               <div class="chips" aria-label="Skills">
@@ -131,10 +144,13 @@
                 <span class="chip">Performance Optimization</span>
                 <span class="chip">Landing Page Strategy</span>
               </div>
+            </div>
 
+            <div class="about__card">
+              <h3 class="card__title">What you get</h3>
               <div class="about__proof">
                 <div class="proof">
-                  <div class="proof__k">What you get</div>
+                  <div class="proof__k">Outcome</div>
                   <div class="proof__v">Copy-friendly sections, conversion CTA, and a clear funnel.</div>
                 </div>
                 <div class="proof">
@@ -144,6 +160,60 @@
               </div>
 
               <a class="btn btn--primary btn--full" href="#contact">Get Free Consultation</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="stats" aria-label="Statistics">
+        <div class="container">
+          <div class="stats">
+            <div class="stats__grid">
+              <article class="stat" aria-label="Trusted Clients">
+                <div class="stat__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                    <path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="currentColor" stroke-width="1.8"/>
+                    <path d="M4 20c1.6-3.6 4.7-6 8-6s6.4 2.4 8 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <div class="stat__value"><span class="stat__num" data-count="1485">1,485</span><span class="stat__plus">+</span></div>
+                <div class="stat__label">Trusted Clients</div>
+              </article>
+
+              <article class="stat" aria-label="Projects Completed">
+                <div class="stat__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                    <path d="M7 3h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.8"/>
+                    <path d="M8 8h8M8 12h8M8 16h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <div class="stat__value"><span class="stat__num" data-count="3452">3,452</span><span class="stat__plus">+</span></div>
+                <div class="stat__label">Projects Completed</div>
+              </article>
+
+              <article class="stat" aria-label="Years of Experience">
+                <div class="stat__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                    <path d="M12 7v6l4 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                    <path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z" stroke="currentColor" stroke-width="1.8"/>
+                  </svg>
+                </div>
+                <div class="stat__value"><span class="stat__num" data-count="25">25</span><span class="stat__plus">+</span></div>
+                <div class="stat__label">Years of Experience</div>
+              </article>
+
+              <article class="stat" aria-label="Professional Team">
+                <div class="stat__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                    <path d="M16 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" stroke="currentColor" stroke-width="1.8"/>
+                    <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="currentColor" stroke-width="1.8"/>
+                    <path d="M3.5 20c1.3-3.1 4-5 6.9-5 3 0 5.6 1.9 6.9 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                    <path d="M14.5 20c.5-1.7 1.8-3 3.6-3 1.4 0 2.6.7 3.4 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <div class="stat__value"><span class="stat__num" data-count="75">75</span><span class="stat__plus">+</span></div>
+                <div class="stat__label">Professional Team</div>
+              </article>
             </div>
           </div>
         </div>
@@ -176,142 +246,181 @@
       </section>
 
       <section class="section" id="services" aria-label="Services">
-        <div class="container">
-          <div class="section__head">
-            <h2 class="section__title">Services that drive action</h2>
-            <p class="section__subtitle">Choose a package—or let’s customize based on your goals and timeline.</p>
+        <div class="container services2">
+          <div class="services2__head">
+            <h2 class="services2__title">Services that drive action</h2>
+            <p class="services2__subtitle">Choose a package—or let’s customize based on your goals and timeline.</p>
           </div>
 
-          <div class="grid cards">
-            <article class="card">
-              <div class="card__top">
-                <h3 class="card__title">Business Website</h3>
-                <p class="card__price">From ₹3-5k</p>
+          <div class="services2__grid" aria-label="Service cards">
+            <article class="svc" aria-label="Service: Business Website">
+              <div class="svc__top">
+                <div class="svc__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                    <path d="M4 7h16v12H4V7Z" stroke="currentColor" stroke-width="1.8"/>
+                    <path d="M8 7V5h8v2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                    <path d="M8 12h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <div class="svc__meta">
+                  <h3 class="svc__title">Business Website</h3>
+                  <p class="svc__price">From ₹3-5k</p>
+                </div>
               </div>
-              <p class="muted">A professional site that builds trust and generates inquiries.</p>
-              <ul class="list">
+              <p class="svc__desc">A professional site that builds trust and generates inquiries.</p>
+              <ul class="svc__list">
                 <li>Home + key pages</li>
                 <li>Lead-focused CTA + contact form</li>
                 <li>Mobile-first + fast performance</li>
               </ul>
-              <a class="link" href="#contact">Request a quote →</a>
+              <a class="svc__link" href="#contact">Request a quote →</a>
             </article>
 
-            <article class="card card--featured">
-              <div class="card__badge">Most Popular</div>
-              <div class="card__top">
-                <h3 class="card__title">Landing Page</h3>
-                <p class="card__price">From ₹5k</p>
+            <article class="svc svc--featured" aria-label="Service: Landing Page">
+              <div class="svc__badge">Most Popular</div>
+              <div class="svc__top">
+                <div class="svc__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                    <path d="M12 2l3 6 7 .8-5.2 4.6L18 21l-6-3.3L6 21l1.2-7.1L2 8.8 9 8l3-6Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="svc__meta">
+                  <h3 class="svc__title">Landing Page</h3>
+                  <p class="svc__price">From ₹2-3k</p>
+                </div>
               </div>
-              <p class="muted">Perfect for ads, launches, and lead generation campaigns.</p>
-              <ul class="list">
+              <p class="svc__desc">Perfect for ads, launches, and lead generation campaigns.</p>
+              <ul class="svc__list">
                 <li>Conversion-first layout</li>
                 <li>Social proof + FAQ</li>
                 <li>Analytics-ready structure</li>
               </ul>
-              <a class="btn btn--primary btn--full" href="#contact">Get Your Landing Page</a>
+              <a class="btn btn--hero-primary btn--full" href="#contact">Get Your Landing Page</a>
             </article>
 
-            <article class="card">
-              <div class="card__top">
-                <h3 class="card__title">Ecommerce Website</h3>
-                <p class="card__price">From ₹10-15k</p>
+            <article class="svc" aria-label="Service: Ecommerce Website">
+              <div class="svc__top">
+                <div class="svc__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                    <path d="M6 6h15l-2 8H7L6 6Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                    <path d="M6 6 5 3H2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                    <path d="M9 20a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM17 20a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z" stroke="currentColor" stroke-width="1.8"/>
+                  </svg>
+                </div>
+                <div class="svc__meta">
+                  <h3 class="svc__title">Ecommerce Website</h3>
+                  <p class="svc__price">From ₹10-15k</p>
+                </div>
               </div>
-              <p class="muted">A storefront designed to reduce friction and increase sales.</p>
-              <ul class="list">
+              <p class="svc__desc">A storefront designed to reduce friction and increase sales.</p>
+              <ul class="svc__list">
                 <li>Product-focused design</li>
                 <li>Clear navigation + trust elements</li>
                 <li>Conversion-friendly checkout flow</li>
               </ul>
-              <a class="link" href="#contact">Talk ecommerce →</a>
+              <a class="svc__link" href="#contact">Talk ecommerce →</a>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section" id="work" aria-label="Portfolio">
+<section class="portfolio-services" id="work" aria-label="Portfolio">
         <div class="container">
-          <div class="section__head">
-            <h2 class="section__title">Recent work</h2>
-            <p class="section__subtitle">A few examples of how I turn business goals into clean, effective pages.</p>
+          <div class="portfolio-services__head">
+<h2 class="portfolio-services__title">Recent work</h2>
+            <p class="portfolio-services__subtitle">A few examples of how I turn business goals into clean, effective pages.</p>
           </div>
 
-          <div class="grid portfolio">
-            <article class="portfolio-card" aria-label="Project: Restaurant Website">
-              <div class="portfolio-card__thumb" aria-hidden="true"></div>
-              <div class="portfolio-card__body">
-                <h3 class="portfolio-card__title">Restaurant Website</h3>
-                <p class="portfolio-card__desc">A modern website for a restaurant with menu and online order features</p>
-                <div class="portfolio-card__actions">
-                  <a class="btn btn--secondary" href="#" aria-disabled="true">Live Demo</a>
-                  <a class="btn btn--primary" href="#" aria-disabled="true">View Details</a>
-                </div>
+          <div class="portfolio-services__grid" aria-label="Portfolio cards">
+            <article class="portfolio-card-services" aria-label="Project: Restaurant Website">
+              <div class="portfolio-card-services__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M13 2L3 14h6v8h4v-8h6z"/>
+                  <path d="M19 22v-6h2v-4h-5V2h-2v12H2v4h5v6h3z"/>
+                </svg>
+              </div>
+              <h3 class="portfolio-card-services__title">Restaurant Website</h3>
+              <p class="portfolio-card-services__desc">A modern website for a restaurant with menu and online order features</p>
+              <div class="portfolio-card-btns">
+                <a class="btn btn--demo" href="#">Live Demo</a>
+                <a class="btn btn--details btn--primary" href="#contact">View Details</a>
               </div>
             </article>
 
-            <article class="portfolio-card" aria-label="Project: Clinic Website">
-              <div class="portfolio-card__thumb portfolio-card__thumb--clinic" aria-hidden="true"></div>
-              <div class="portfolio-card__body">
-                <h3 class="portfolio-card__title">Clinic Website</h3>
-                <p class="portfolio-card__desc">A professional website for a medical clinic with appointment booking system</p>
-                <div class="portfolio-card__actions">
-                  <a class="btn btn--secondary" href="#" aria-disabled="true">Live Demo</a>
-                  <a class="btn btn--primary" href="#" aria-disabled="true">View Details</a>
-                </div>
+            <article class="portfolio-card-services portfolio-card-services--highlight" aria-label="Project: Clinic Website">
+              <div class="portfolio-card-services__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21v-8m0 0V7a2 2 0 0 0-4 0v6a2 2 0 0 0 4 0zm4 0v-8m0 0V7a2 2 0 0 0 4 0v6a2 2 0 0 0-4 0z"/>
+                  <circle cx="8.5" cy="7" r="1"/>
+                  <circle cx="18.5" cy="7" r="1"/>
+                  <circle cx="13.5" cy="13" r="1"/>
+                </svg>
+              </div>
+              <h3 class="portfolio-card-services__title">Clinic Website</h3>
+              <p class="portfolio-card-services__desc">A professional website for a medical clinic with appointment booking system</p>
+              <div class="portfolio-card-btns">
+                <a class="btn btn--demo" href="#">Live Demo</a>
+                <a class="btn btn--details" href="#contact">View Details</a>
               </div>
             </article>
 
-            <article class="portfolio-card" aria-label="Project: Coaching Center Website">
-              <div class="portfolio-card__thumb portfolio-card__thumb--coaching" aria-hidden="true"></div>
-              <div class="portfolio-card__body">
-                <h3 class="portfolio-card__title">Coaching Center Website</h3>
-                <p class="portfolio-card__desc">A clean website for an educational institute with course and admission details</p>
-                <div class="portfolio-card__actions">
-                  <a class="btn btn--secondary" href="#" aria-disabled="true">Live Demo</a>
-                  <a class="btn btn--primary" href="#" aria-disabled="true">View Details</a>
-                </div>
+            <article class="portfolio-card-services" aria-label="Project: Coaching Center Website">
+              <div class="portfolio-card-services__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 12h-2.5l-.7 1.4a3 3 0 0 1-2.7 1.6H12V9.2a3 3 0 0 1 2.7-3h5.6a3 3 0 0 1 2.7 3z"/>
+                  <path d="M10 9H7.5a3 3 0 0 0-2.7 3V19a3 3 0 0 0 2.7 3H10"/>
+                  <path d="M22 12h-5.5a2.5 2.5 0 0 1 0-5H22"/>
+                  <path d="M2 12h5.5a2.5 2.5 0 0 1 0 5H2"/>
+                  <path d="M2 7v10"/>
+                </svg>
+              </div>
+              <h3 class="portfolio-card-services__title">Coaching Center Website</h3>
+              <p class="portfolio-card-services__desc">A clean website for an educational institute with course and admission details</p>
+              <div class="portfolio-card-btns">
+                <a class="btn btn--demo" href="#">Live Demo</a>
+                <a class="btn btn--details btn--primary" href="#contact">View Details</a>
               </div>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section" id="testimonials" aria-label="Testimonials">
+      <section class="section testimonials-section" id="testimonials" aria-label="Testimonials">
         <div class="container">
           <div class="section__head">
             <h2 class="section__title">Clients say it best</h2>
             <p class="section__subtitle">Demo testimonials you can replace with real reviews anytime.</p>
           </div>
 
-          <div class="grid testimonials">
-            <figure class="quote">
+          <div class="testimonials-grid">
+            <figure class="testimonial-card testimonial-card--light">
+              <div class="testimonial-decor"></div>
+              <div class="testimonial-avatar">
+                <img src="img2.jfif" loading="eager" decoding="async" alt="Riya S., restaurant owner">
+              </div>
               <blockquote>
                 “Our new site looks premium and we started getting booking inquiries within the first week. The process was smooth and fast.”
               </blockquote>
-              <figcaption>
-                <span class="quote__name">Riya S.</span>
-                <span class="quote__role">Restaurant Owner</span>
-              </figcaption>
+              <div class="testimonial-author">
+                <div class="stars">★★★★★</div>
+                <h3 class="testimonial-name">RIYA S.</h3>
+                <p class="testimonial-role">Restaurant Owner</p>
+              </div>
             </figure>
 
-            <figure class="quote">
+            <figure class="testimonial-card testimonial-card--orange">
+              <div class="testimonial-decor"></div>
+              <div class="testimonial-avatar">
+                <img src="img3.jfif" loading="eager" decoding="async" alt="Aman K., clinic manager">
+              </div>
               <blockquote>
-                “The landing page improved our lead quality and made our offer clear. Great design sense and attention to conversion.”
+                "The landing page improved our lead quality and made our offer clear. Great design sense and attention to conversion."
               </blockquote>
-              <figcaption>
-                <span class="quote__name">Aman K.</span>
-                <span class="quote__role">Clinic Manager</span>
-              </figcaption>
-            </figure>
-
-            <figure class="quote">
-              <blockquote>
-                “Super responsive, clean code, and the site loads incredibly fast. Exactly what we needed for our new launch.”
-              </blockquote>
-              <figcaption>
-                <span class="quote__name">Nisha P.</span>
-                <span class="quote__role">Startup Founder</span>
-              </figcaption>
+              <div class="testimonial-author">
+                <div class="stars">★★★★★</div>
+                <h3 class="testimonial-name">AMAN K.</h3>
+                <p class="testimonial-role">Clinic Manager</p>
+              </div>
             </figure>
           </div>
         </div>
